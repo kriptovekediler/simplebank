@@ -91,12 +91,4 @@ func TestListAccounts(t *testing.T) {
 		Limit:  5,
 		Offset: 5,
 	}
-
-	accounts, err := testQueries.ListAccounts(context.Background(), arg)
-	require.NoError(t, err)
-	require.Len(t, accounts, 5)
-
-	for _, account := range accounts {
-		require.NotEmpty(t, account)
-	}
 }
